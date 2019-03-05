@@ -1,9 +1,10 @@
 ## Get started
 
-### Clone the repo
+### Clone the repo and inside into the porject folder
 
 ```shell
 git clone https://github.com/ratneshjais/AngularPhpMysql
+ 
 cd AngularPhpMysql
 ```
 
@@ -13,31 +14,33 @@ Install the `npm` packages described in the `package.json` and verify that it wo
 
 ```shell
 npm install
+ 
 npm start
 ```
-Open the browser and visit url for front end 
+
+Now Open the browser and visit url for run the project
 
 ```shell
-http://localhost:4200/users
+http://localhost:4200
 ```
 ## Start the PHP Api Server
 
-Open Terminal or cmd and get into the test folder and run commanf to start the PHP backend Server
+Open Terminal or cmd and get into the `/AngularPhpMysql/test` folder and run below command to start the PHP backend Server
 
 ```shell
 php -S 127.0.0.1:12345
 ```
 it will start the backend server.
 
-### database setup
+### Database setup should be
 
-Schema
+ 
 
 ```shell
-create database mydb;
-
-use mydb;
-
+CREATE DATABASE mydb;
+ 
+ 
+ 
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `fname` varchar(50),
@@ -50,4 +53,4 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 ```
-##Ready to use
+###Now Ready to use
