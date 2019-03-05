@@ -2,8 +2,8 @@
 
 require 'connect.php';
 
-if(isset($_POST) && !empty($_POST)) 
-{
+$_POST = json_decode(file_get_contents('php://input'), true);
+if(isset($_POST) && !empty($_POST)) {
 
   //fetching the variables through post request  
   $fname = $_POST['fname'];
@@ -15,7 +15,7 @@ if(isset($_POST) && !empty($_POST))
   $zip = $_POST['zip'];
 
   //SQL Statement
-  $sql = "insert into user (fname, lname, dob, email, address, phone, zip) values('$fname', '$lname', '$dob', '$email', '$address', '$phone','$zip')"; 
+  $sql = "insert into user (fname, lname, dob, phone, email, address, zip) values('$fname', '$lname', '$dob', '$phone', '$email', '$address','$zip')"; 
 
   
     // run SQL statement
@@ -32,6 +32,6 @@ if(isset($_POST) && !empty($_POST))
     {
         $data = true;
     }
-    echo $data;
+    echo '1';
 }
 ?>
