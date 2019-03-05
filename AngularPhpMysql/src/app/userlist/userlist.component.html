@@ -1,0 +1,27 @@
+<h1>
+All Registered User List
+</h1>
+<h3>
+  <a routerLink="/register" class="button">Get Registered</a>
+</h3>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Fullname</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>DOB</th>
+    <th>Address</th>
+    <th>Zip</th>
+  </tr>
+  <tr *ngFor="let u of user; let i = index; let evn = even; let od = odd" [ngClass]="{even: evn, odd:od}">
+    <td>{{i+1}}</td>
+    <td>{{u.name}}</td>
+    <td>{{u.phone}}</td>
+    <td>{{u.email}}</td>
+    <td>{{u.dob}}</td>
+    <td>{{u.address}}</td>
+    <td>{{u.zip}}</td>
+  </tr>
+</table>
